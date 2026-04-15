@@ -1,0 +1,149 @@
+/* Custom Styles for The Digital Lab */
+
+:root {
+    --brand-cyan: #64ffda;
+    --brand-teal: #2dd4bf;
+    --brand-dark: #0a192f;
+    --brand-deep: #020c1b;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--brand-deep);
+}
+
+::-webkit-scrollbar-thumb {
+    background: #112240;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #233554;
+}
+
+/* Glassmorphism utility */
+.glass {
+    background: rgba(10, 25, 47, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+    animation: fadeIn 0.8s ease-out forwards;
+}
+
+.course-card {
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.course-card:hover {
+    box-shadow: 0 20px 40px -15px rgba(100, 255, 218, 0.15);
+}
+
+/* Text Selection */
+::selection {
+    background-color: var(--brand-cyan);
+    color: var(--brand-dark);
+}
+
+/* Input Focus Glow */
+input:focus, select:focus {
+    box-shadow: 0 0 15px rgba(100, 255, 218, 0.2);
+}
+
+/* Image Hover Glow */
+.hero-img-glow {
+    box-shadow: 0 0 50px rgba(100, 255, 218, 0.2);
+}
+
+/* Smooth arrow transition */
+.arrow {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.group:hover .arrow {
+    transform: translateX(5px);
+}
+
+/* Custom Utility Classes */
+
+/* 1. Frosted Glass Effect for Nav and Cards */
+.glass-panel {
+    background: rgba(15, 23, 42, 0.6);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* 2. Laboratory Glow Text */
+.text-glow-cyan {
+    text-shadow: 0 0 15px rgba(34, 211, 238, 0.4);
+}
+
+/* Custom Lab Theme Styles for Image Blending */
+.lab-img-blend {
+    /* Changed from mix-blend-mode to grayscale as requested to handle the dark grey background gracefully */
+    filter: grayscale(80%) contrast(1.1) brightness(0.9);
+    transition: all 0.5s ease-in-out;
+}
+
+.lab-img-blend:hover {
+    filter: grayscale(20%) contrast(1.2) brightness(1.05);
+    transform: scale(1.02);
+}
+
+.img-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 2.5rem; /* More rounded borders */
+    /* Pure black underneath for depth, plus a gorgeous white glow expanding outwards */
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.9), 0 0 35px rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.5s ease;
+}
+
+/* Make the white glow intensify when hovering over the container */
+.img-container:hover {
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.9), 0 0 50px rgba(255, 255, 255, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Vignette to fade the image background into the slate site background */
+.img-container::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    box-shadow: inset 0px 0px 60px 15px rgba(2, 6, 23, 0.9); /* Deep slate inner shadow */
+    border-radius: 2.5rem;
+    pointer-events: none;
+    z-index: 20;
+}
+
+/* Base frame for portraits so they don't float */
+.portrait-frame {
+    border-radius: 2.5rem 2.5rem 0 0 !important;
+}
+
+.portrait-frame::after {
+    border-radius: 2.5rem 2.5rem 0 0 !important;
+    box-shadow: inset 0px 20px 50px -10px rgba(2, 6, 23, 0.9), inset 5px 0px 30px rgba(2,6,23,0.5), inset -5px 0px 30px rgba(2,6,23,0.5) !important; /* Top & side vignette */
+}
+
+/* 3. High-Tech Grid Background */
+.lab-grid {
+    background-image: 
+        linear-gradient(to right, rgba(34, 211, 238, 0.05) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(34, 211, 238, 0.05) 1px, transparent 1px);
+    background-size: 40px 40px;
+}

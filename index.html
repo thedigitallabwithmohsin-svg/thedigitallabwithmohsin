@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Digital Lab with Mohsin | Master E-Commerce & Web Development</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Join The Digital Lab with Mohsin to master Web Development and E-commerce platforms like Amazon, eBay, and TikTok Shop. Build your digital empire from zero to pro.">
+    <meta name="keywords" content="E-commerce training, Web Development course, Amazon FBA, eBay Selling, TikTok Shop, Mohsin, Digital Lab, Dina, Jhelum">
+    <meta name="author" content="Mohsin">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://thedigitallab.com/">
+    <meta property="og:title" content="The Digital Lab with Mohsin | Master E-Commerce & Web Development">
+    <meta property="og:description" content="Build your digital empire with professional mentorship in Web Development and E-commerce.">
+    <meta property="og:image" content="assets/preview-banner.png">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://thedigitallab.com/">
+    <meta name="twitter:title" content="The Digital Lab with Mohsin | Master E-Commerce & Web Development">
+    <meta name="twitter:description" content="Build your digital empire with professional mentorship in Web Development and E-commerce.">
+    <meta name="twitter:image" content="assets/preview-banner.png">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            dark: '#0a192f',
+                            deep: '#020c1b',
+                            cyan: '#64ffda',
+                            teal: '#2dd4bf',
+                            blue: '#1e3a8a',
+                        },
+                        lab: {
+                            bg: '#020617',     // Ultra Deep Slate (Deepest Background)
+                            surface: '#0f172a', // Card Surface
+                            cyan: '#22d3ee',    // Electric Cyan (Primary Accent)
+                            teal: '#0d9488',    // Deep Teal (Secondary Accent)
+                            indigo: '#6366f1',  // Tech Indigo (Wildcard Color for Depth)
+                        }
+                    },
+                    boxShadow: {
+                        'glow-cyan': '0 0 20px rgba(34, 211, 238, 0.3)',
+                        'glow-indigo': '0 0 20px rgba(99, 102, 241, 0.2)',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        tech: ['Orbitron', 'sans-serif'],
+                    },
+                    animation: {
+                        'glow': 'glow 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'float': 'float 6s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        glow: {
+                            '0%, 100%': { opacity: 1, filter: 'brightness(1)' },
+                            '50%': { opacity: 0.7, filter: 'brightness(1.5)' },
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS for Glows and Extras -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-brand-deep text-gray-300 font-sans selection:bg-brand-cyan selection:text-brand-dark">
+
+    <!-- Header -->
+    <header class="fixed top-0 w-full z-50 transition-all duration-300 backdrop-blur-md bg-brand-deep/80 border-b border-white/10" id="main-header">
+        <nav class="w-full px-6 lg:px-12 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-3 select-none cursor-pointer">
+                <img src="assets/logo.png" alt="Logo" class="h-10 md:h-12 w-auto">
+                <div class="flex flex-col">
+                    <span class="font-tech text-xl md:text-2xl font-bold tracking-[0.15em] text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-teal-400 leading-none">DIGITAL LAB</span>
+                    <span class="text-[9px] md:text-[10px] text-cyan-500/70 tracking-[0.3em] uppercase ml-1 mt-1 font-mono leading-none">with Mohsin</span>
+                </div>
+            </div>
+            
+            <!-- Desktop Menu -->
+            <ul class="hidden md:flex gap-8 font-medium">
+                <li><a href="#home" class="hover:text-brand-cyan transition-colors">Home</a></li>
+                <li><a href="#courses" class="hover:text-brand-cyan transition-colors">Courses</a></li>
+                <li><a href="#about" class="hover:text-brand-cyan transition-colors">About</a></li>
+                <li><a href="#contact" class="hover:text-brand-cyan transition-colors">Contact</a></li>
+            </ul>
+
+            <a href="#enroll" class="hidden md:block px-6 py-2 border border-brand-cyan text-brand-cyan rounded-full hover:bg-brand-cyan/10 transition-all font-semibold">Join the Lab</a>
+
+            <!-- Mobile Menu Toggle -->
+            <button class="md:hidden text-white" id="menu-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </nav>
+        
+        <!-- Mobile Menu -->
+        <div class="hidden md:hidden absolute w-full bg-brand-dark/95 border-b border-white/5 py-6 px-6" id="mobile-menu">
+            <ul class="flex flex-col gap-4 text-center">
+                <li><a href="#home" class="block py-2">Home</a></li>
+                <li><a href="#courses" class="block py-2">Courses</a></li>
+                <li><a href="#about" class="block py-2">About</a></li>
+                <li><a href="#contact" class="block py-2">Contact</a></li>
+                <li><a href="#enroll" class="bg-brand-cyan text-brand-dark rounded-full py-3 mt-2 block font-bold">Enroll Now</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="relative min-h-screen flex items-center pt-28 pb-12 overflow-hidden">
+            <!-- Animated Background Elements -->
+            <div class="absolute inset-0 z-0">
+                <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-brand-cyan/10 rounded-full blur-[120px] animate-pulse"></div>
+                <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-brand-teal/10 rounded-full blur-[120px] animate-pulse" style="animation-delay: 2s;"></div>
+            </div>
+
+            <div class="container mx-auto px-6 relative z-10 grid md:grid-cols-2 gap-12 items-center py-10">
+                <div class="space-y-6 text-center md:text-left">
+                    <h1 class="text-5xl md:text-6xl lg:text-7xl font-tech font-bold text-white leading-tight">
+                        Mastering <br class="hidden md:block" />
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-teal-400">E-Commerce</span><br />
+                        <span class="text-4xl md:text-5xl">& Web Design</span>
+                    </h1>
+                    <p class="text-lg md:text-xl text-slate-400 mt-6 max-w-xl mx-auto md:mx-0">
+                        Engineer your success in the world's biggest marketplaces.
+                    </p>
+                    <div class="flex justify-center md:justify-start pt-4">
+                        <a href="#enroll" class="px-8 py-4 bg-cyan-600 hover:bg-cyan-500 text-white font-bold rounded-lg transition-all shadow-[0_0_20px_rgba(8,145,178,0.4)]">
+                            Initialize Enrollment
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="relative max-w-sm md:max-w-md mx-auto xl:max-w-lg img-container portrait-frame group flex items-end pt-12 px-6 border-b-[3px] border-cyan-500/50">
+                    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-cyan-500/40 blur-[100px] rounded-full animate-pulse-slow pointer-events-none"></div>
+                    
+                    <!-- Glowing 3D backdrop for the portrait -->
+                    <div class="absolute inset-0 bg-gradient-to-b from-cyan-500/30 via-cyan-900/40 to-brand-deep opacity-90 rounded-t-[2.5rem] rounded-b-none pointer-events-none"></div>
+
+                    <img src="assets/hero-portrait-final.jpg" 
+                         alt="Mohsin Raza" 
+                         class="relative z-10 w-full h-auto object-bottom origin-bottom transition-all duration-500 rounded-t-[2.5rem] rounded-b-none grayscale contrast-[1.1] brightness-105 drop-shadow-2xl group-hover:scale-[1.03] group-hover:contrast-[1.2]">
+                </div>
+            </div>
+        </section>
+
+        <!-- Branding Banner Section -->
+        <section class="py-12 bg-brand-deep/50 border-y border-white/5 relative z-20">
+            <div class="max-w-7xl mx-auto px-6 text-center">
+                <div class="inline-block relative w-full img-container">
+                    <img src="assets/preview-banner.png" alt="Lab Infrastructure" class="w-full rounded-[2.5rem] border border-white/5 transition-all duration-500 lab-img-blend">
+                </div>
+            </div>
+        </section>
+
+        <!-- Courses Section -->
+        <section id="courses" class="py-16 md:py-24 bg-slate-950 relative overflow-hidden">
+            <div class="absolute inset-0 opacity-10 pointer-events-none" 
+                 style="background-image: radial-gradient(#06b6d4 1px, transparent 1px); background-size: 30px 30px;"></div>
+
+            <div class="max-w-7xl mx-auto px-6 relative z-10">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-5xl font-bold tracking-tighter uppercase italic">
+                        Our Laboratory <span class="text-cyan-500 text-glow-cyan text-not-italic">Tracks</span>
+                    </h2>
+                    <p class="text-slate-500 mt-4 max-w-2xl mx-auto font-mono text-sm uppercase tracking-widest">
+                        [ Initialize System: Selecting Active Research Modules ]
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    
+                    <div class="group relative p-8 bg-slate-900/40 border border-cyan-900/30 rounded-2xl hover:border-cyan-500/50 transition-all duration-500 overflow-hidden">
+                        <div class="absolute -inset-1 bg-cyan-500/10 blur-xl opacity-0 group-hover:opacity-100 transition duration-500"></div>
+                        
+                        <div class="relative z-10">
+                            <div class="w-14 h-14 bg-cyan-500/10 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition duration-500">
+                                <i data-lucide="terminal" class="w-8 h-8 text-cyan-400"></i>
+                            </div>
+                            <h3 class="text-xl font-bold mb-3 text-white uppercase tracking-tight italic">Web Development</h3>
+                            <p class="text-slate-400 text-sm mb-6 leading-relaxed">Full-stack engineering focused on React, Tailwind & Backend logic.</p>
+                            
+                            <ul class="space-y-3 mb-8 text-[12px] font-mono text-slate-500 uppercase">
+                                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-cyan-500 rounded-full animate-pulse"></span> UI/UX Optimization</li>
+                                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-cyan-500 rounded-full"></span> Logic Architecture</li>
+                            </ul>
+
+                            <button class="w-full py-3 bg-transparent border border-cyan-500/30 text-cyan-400 text-xs font-bold uppercase tracking-[0.2em] rounded-lg group-hover:bg-cyan-500 group-hover:text-white transition-all">
+                                Initialize Module
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="group relative p-8 bg-slate-900/40 border border-cyan-900/30 rounded-2xl hover:border-cyan-500/50 transition-all duration-500">
+                        <div class="relative z-10">
+                            <div class="w-14 h-14 bg-orange-500/10 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition duration-500">
+                                <i data-lucide="package" class="w-8 h-8 text-orange-400"></i>
+                            </div>
+                            <h3 class="text-xl font-bold mb-3 text-white uppercase italic">Amazon Mastery</h3>
+                            <p class="text-slate-400 text-sm mb-6">Mastering FBA, Private Label, and wholesale strategies for global growth.</p>
+                            
+                            <ul class="space-y-3 mb-8 text-[12px] font-mono text-slate-500 uppercase">
+                                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-orange-500 rounded-full animate-pulse"></span> FBA/PL Strategies</li>
+                                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-orange-500 rounded-full"></span> Inventory Mgmt</li>
+                            </ul>
+
+                            <button class="w-full py-3 border border-orange-500/30 text-orange-400 text-xs font-bold uppercase rounded-lg group-hover:bg-orange-500 group-hover:text-white transition-all">
+                                Initialize Module
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="group relative p-8 bg-slate-900/40 border border-cyan-900/30 rounded-2xl hover:border-cyan-500/50 transition-all duration-500">
+                        <div class="relative z-10">
+                            <div class="w-14 h-14 bg-pink-500/10 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition duration-500">
+                                <i data-lucide="play" class="w-8 h-8 text-pink-400"></i>
+                            </div>
+                            <h3 class="text-xl font-bold mb-3 text-white uppercase italic">TikTok Mastery</h3>
+                            <p class="text-slate-400 text-sm mb-6">Revolutionary E-commerce scaling via TikTok Shop & Viral Ads.</p>
+                            
+                            <ul class="space-y-3 mb-8 text-[12px] font-mono text-slate-500 uppercase">
+                                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-pink-500 rounded-full animate-pulse"></span> Viral Marketing</li>
+                                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-pink-500 rounded-full"></span> Shop Automation</li>
+                            </ul>
+
+                            <button class="w-full py-3 border border-pink-500/30 text-pink-400 text-xs font-bold uppercase rounded-lg group-hover:bg-pink-500 group-hover:text-white transition-all">
+                                Initialize Module
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="group relative p-8 bg-slate-900/40 border border-cyan-900/30 rounded-2xl hover:border-cyan-500/50 transition-all duration-500">
+                        <div class="relative z-10">
+                            <div class="w-14 h-14 bg-blue-500/10 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition duration-500">
+                                <i data-lucide="shopping-cart" class="w-8 h-8 text-blue-400"></i>
+                            </div>
+                            <h3 class="text-xl font-bold mb-3 text-white uppercase italic">eBay Selling</h3>
+                            <p class="text-slate-400 text-sm mb-6">Sustainable dropshipping and brand building on eBay Marketplace.</p>
+                            
+                            <ul class="space-y-3 mb-8 text-[12px] font-mono text-slate-500 uppercase">
+                                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full animate-pulse"></span> Global Sourcing</li>
+                                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span> Account Health</li>
+                            </ul>
+
+                            <button class="w-full py-3 border border-blue-500/30 text-blue-400 text-xs font-bold uppercase rounded-lg group-hover:bg-blue-500 group-hover:text-white transition-all">
+                                Initialize Module
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-16 md:py-24 bg-slate-950 relative overflow-hidden border-t border-cyan-900/40">
+            <!-- Grid Background -->
+            <div class="absolute inset-0 opacity-10 pointer-events-none" 
+                 style="background-image: linear-gradient(#06b6d4 1px, transparent 1px), linear-gradient(90deg, #06b6d4 1px, transparent 1px); background-size: 40px 40px;"></div>
+
+            <div class="max-w-7xl mx-auto px-6 relative z-10">
+                <div class="flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
+                    
+                    <!-- Left Image Panel -->
+                    <div class="lg:w-1/2 w-full relative img-container">
+                        <div class="absolute inset-0 bg-cyan-500/20 blur-[100px] rounded-full animate-pulse-slow"></div>
+                        <img src="assets/mohsin.jpg" alt="Mohsin Raza Professional" class="relative z-10 w-full rounded-[2.5rem] border border-white/10 transition-all duration-500 lab-img-blend">
+                    </div>
+
+                    <!-- Right Data Panel -->
+                    <div class="lg:w-1/2 w-full">
+                        <div class="mb-4">
+                            <span class="font-mono text-cyan-500 text-xs tracking-[0.2em] uppercase border border-cyan-500/30 bg-cyan-500/10 px-3 py-1 rounded-full">
+                                The Mastermind
+                            </span>
+                        </div>
+                        <h2 class="text-3xl md:text-5xl font-bold tracking-tighter uppercase italic text-white mb-6 mt-4">
+                            The Scientist <br/> <span class="text-cyan-500 text-glow-cyan text-not-italic">Behind the Lab</span>
+                        </h2>
+                        
+                        <div class="space-y-6 text-slate-400 font-mono text-sm leading-relaxed border-l-2 border-cyan-900 pl-6">
+                            <p>
+                                <span class="text-cyan-500">></span> <span class="text-white font-semibold">Precision hardware meets digital growth.</span><br/>
+                                With a background as a Mobile Technician and E-commerce Manager, I bridge the gap between engineering and business.
+                            </p>
+                            <p>
+                                <span class="text-cyan-500">></span> <span class="text-white font-semibold">ESTABLISHING_LOCATION...</span><br/>
+                                Based in Dina, Jhelum, I am dedicated to training the next wave of high-performance digital sellers.
+                            </p>
+                        </div>
+
+                        <div class="grid grid-cols-2 gap-6 mt-10">
+                            <div class="bg-slate-900/40 border border-cyan-900/30 p-6 rounded-2xl relative overflow-hidden group hover:border-cyan-500/50 transition-all duration-300">
+                                <div class="absolute bottom-0 left-0 w-full h-1 bg-cyan-500 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500"></div>
+                                <div class="text-4xl font-bold text-white mb-2 tracking-tighter">99<span class="text-cyan-500 text-2xl">%</span></div>
+                                <div class="text-[10px] uppercase font-mono text-cyan-500 tracking-widest leading-tight">Practical <br/>Focus</div>
+                            </div>
+                            <div class="bg-slate-900/40 border border-cyan-900/30 p-6 rounded-2xl relative overflow-hidden group hover:border-cyan-500/50 transition-all duration-300">
+                                <div class="absolute bottom-0 left-0 w-full h-1 bg-cyan-500 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500"></div>
+                                <div class="text-4xl font-bold text-white mb-2 tracking-tighter">500<span class="text-cyan-500 text-2xl">+</span></div>
+                                <div class="text-[10px] uppercase font-mono text-cyan-500 tracking-widest leading-tight">Modules <br/>Executed</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+
+        <!-- Lead Gen Form Section -->
+        <section id="enroll" class="py-16 md:py-24 bg-gradient-to-b from-brand-deep to-brand-dark">
+            <div class="container mx-auto px-6 max-w-4xl">
+                <div class="bg-brand-dark/80 p-6 md:p-12 lg:p-16 rounded-[40px] border border-brand-cyan/20 relative shadow-2xl overflow-hidden">
+                    <!-- Tech decorations -->
+                    <div class="absolute top-0 right-0 w-32 h-32 border-t-2 border-r-2 border-brand-cyan/30 rounded-tr-[40px]"></div>
+                    <div class="absolute bottom-0 left-0 w-32 h-32 border-b-2 border-l-2 border-brand-cyan/30 rounded-bl-[40px]"></div>
+
+                    <div class="text-center mb-12">
+                        <h2 class="text-3xl md:text-5xl font-tech font-bold text-white mb-4">Enroll in the Lab</h2>
+                        <p class="text-gray-400">Ready to start your journey? Fill out the form below and we'll reach out.</p>
+                    </div>
+
+                    <form action="#" class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="space-y-2">
+                                <label class="text-sm text-brand-cyan font-semibold ml-2">FULL NAME</label>
+                                <input type="text" placeholder="Mohanmad Ali" class="w-full bg-brand-deep/50 border border-white/10 rounded-2xl px-6 py-4 focus:border-brand-cyan focus:outline-none transition-all text-white" required>
+                            </div>
+                            <div class="space-y-2">
+                                <label class="text-sm text-brand-cyan font-semibold ml-2">EMAIL ADDRESS</label>
+                                <input type="email" placeholder="example@gmail.com" class="w-full bg-brand-deep/50 border border-white/10 rounded-2xl px-6 py-4 focus:border-brand-cyan focus:outline-none transition-all text-white" required>
+                            </div>
+                        </div>
+                        <div class="space-y-2">
+                            <label class="text-sm text-brand-cyan font-semibold ml-2">SELECT YOUR TRACK</label>
+                            <select class="w-full bg-brand-deep/50 border border-white/10 rounded-2xl px-6 py-4 focus:border-brand-cyan focus:outline-none transition-all text-white appearance-none cursor-pointer">
+                                <option>Advanced Web Development</option>
+                                <option>Amazon Mastery (FBA/Wholesale)</option>
+                                <option>eBay Selling</option>
+                                <option>TikTok Shop Mastery</option>
+                            </select>
+                        </div>
+                        <div class="pt-6">
+                            <button type="submit" class="w-full py-5 bg-brand-cyan text-brand-dark font-bold rounded-2xl hover:bg-brand-teal transition-all shadow-[0_4px_20px_rgba(100,255,218,0.2)]">
+                                INITIALIZE ENROLLMENT
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-brand-deep py-12 md:py-20 border-t border-white/5">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-16 items-start">
+                <!-- Branding -->
+                <div class="space-y-6">
+                    <div class="flex flex-col select-none">
+                        <span class="font-tech text-xl md:text-2xl font-bold tracking-[0.15em] text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-teal-400">DIGITAL LAB</span>
+                        <span class="text-[9px] md:text-[10px] text-cyan-500/70 tracking-[0.3em] uppercase ml-1 -mt-1 font-mono">with Mohsin</span>
+                    </div>
+                    <p class="text-gray-500 text-sm leading-relaxed">
+                        Providing future entrepreneurs with the tools, mentorship, and practical skills to dominate the digital landscape.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="#" class="h-10 w-10 bg-white/5 rounded-full flex items-center justify-center hover:bg-brand-cyan hover:text-brand-dark transition-all">
+                            <span class="sr-only">Facebook</span>
+                            <svg class="h-5 w-5 fill-current" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path></svg>
+                        </a>
+                        <a href="#" class="h-10 w-10 bg-white/5 rounded-full flex items-center justify-center hover:bg-brand-cyan hover:text-brand-dark transition-all">
+                            <span class="sr-only">Instagram</span>
+                            <svg class="h-5 w-5 fill-current" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                        </a>
+                        <a href="https://wa.me/+923000000000" class="h-10 w-10 bg-white/5 rounded-full flex items-center justify-center hover:bg-brand-cyan hover:text-brand-dark transition-all">
+                            <span class="sr-only">WhatsApp</span>
+                            <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"></path></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Navigation -->
+                <div>
+                    <h4 class="font-tech text-white text-sm tracking-widest mb-6">QUICK LINKS</h4>
+                    <ul class="space-y-4 text-sm">
+                        <li><a href="#home" class="hover:text-brand-cyan transition-all">Home</a></li>
+                        <li><a href="#courses" class="hover:text-brand-cyan transition-all">Courses</a></li>
+                        <li><a href="#about" class="hover:text-brand-cyan transition-all">About the Lab</a></li>
+                        <li><a href="#enroll" class="hover:text-brand-cyan transition-all">Join Now</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h4 class="font-tech text-white text-sm tracking-widest mb-6">LOCATION</h4>
+                    <ul class="space-y-4 text-sm">
+                        <li class="flex gap-3 items-start">
+                            <span class="text-brand-cyan">📍</span>
+                            <span>GT Road, Dina, District Jhelum, Punjab, Pakistan</span>
+                        </li>
+                        <li class="flex gap-3 items-start">
+                            <span class="text-brand-cyan">📧</span>
+                            <span>info@digitallabmohsin.com</span>
+                        </li>
+                        <li class="flex items-center gap-3 group cursor-pointer">
+                            <i data-lucide="phone" class="w-5 h-5 text-cyan-500 shrink-0"></i>
+                            <a href="https://wa.me/923430005385" class="hover:text-cyan-400 transition">+92 343 0005385</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-12 md:mt-20 pt-8 border-t border-white/5 text-center text-xs text-gray-600">
+                <p>&copy; 2026 The Digital Lab with Mohsin. Mastery Starts Here.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/923430005385?text=Hello%20Mohsin!%20I%20am%20interested%20in%20The%20Digital%20Lab." 
+       target="_blank" 
+       class="fixed bottom-8 right-8 z-[100] group">
+        
+        <span class="absolute right-16 top-1/2 -translate-y-1/2 bg-slate-900 text-cyan-400 text-xs font-bold py-2 px-4 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 border border-cyan-500/30 whitespace-nowrap shadow-glow-cyan">
+            Chat with Mohsin
+        </span>
+
+        <div class="relative flex items-center justify-center w-16 h-16 bg-[#25D366] rounded-full shadow-[0_0_20px_rgba(37,211,102,0.4)] hover:scale-110 transition-transform duration-300">
+            <div class="absolute inset-0 rounded-full bg-[#25D366] animate-ping opacity-20"></div>
+            
+            <svg viewBox="0 0 24 24" class="w-8 h-8 fill-white">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.414 0 .018 5.396.015 12.035c0 2.123.559 4.196 1.619 6.007L0 24l6.135-1.61a11.822 11.822 0 005.91 1.586h.005c6.637 0 12.032-5.396 12.035-12.037a11.848 11.848 0 00-3.51-8.492z" />
+            </svg>
+        </div>
+    </a>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Header scroll effect
+        const header = document.getElementById('main-header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('py-2', 'bg-brand-deep/95');
+                header.classList.remove('py-4', 'bg-brand-deep/80');
+            } else {
+                header.classList.add('py-4', 'bg-brand-deep/80');
+                header.classList.remove('py-2', 'bg-brand-deep/95');
+            }
+        });
+
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu on link click
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Scroll animations using Intersection Observer
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fade-in');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section, .course-card').forEach(el => {
+            el.style.opacity = '0';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
